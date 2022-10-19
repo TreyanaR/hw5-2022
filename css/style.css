@@ -1,0 +1,100 @@
+/*animate logo*/
+
+#logo{
+  width: 475px;  
+  animation: hw5_move 5s;
+}
+@keyframes hw5_move{
+    from{width: 25px;}
+    to{width: 475px;}
+
+}
+
+/*google font, with serif as back up and background image*/
+
+body{
+    font-family: 'Poppins', serif;
+    background: url('../images/concrete_seamless.png'), #f1f1f1;
+}
+/*align beginning header and headers within card class*/
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/*style headers under card class to give them appearance of photos*/
+.card > header{
+    background: #288088;
+    border: 2px solid #45adad;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+/*align navigation links*/
+.nav_links{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/*style links to stay the same when visited*/
+.nav_item a:visited{
+    color: blue;
+}
+/*style cards to give them appearance of photos*/
+.card{
+    display: flex;
+    flex-basis: 450px;
+    flex-direction: column;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+/*style cards to give them placement of photos*/
+.pricing{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    margin: 30px;
+
+}
+/*photo placement with flexbox*/
+
+.gallery{
+    display: flex;
+    flex-wrap: column wrap;
+}
+/* border and consistent width and margin of photos*/
+.gallery img{
+    border: 10px solid #50c7c7;
+    margin: 10px;
+    width: 300px;
+}
+/*media query for bigger screen sizes*/
+
+@media all and (min-width:900px){
+    header, .nav_links{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .pricing{
+        display: flex;
+        flex-basis: 275px;
+        flex-direction: row;}
+
+    .card{
+        display: flex;
+        justify-content: center;
+    }
+    /*grab the header outside main function and make it stay in place while scrolling*/
+    header:nth-child(2){
+        position: sticky;
+        top: 0;
+    }
+
+    }
+
+
+
