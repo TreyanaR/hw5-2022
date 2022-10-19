@@ -95,6 +95,10 @@ header{
     }
 
     }
-
-
+@media(prefers-reduced-motion){
+    #logo{
+        width: 475px;
+        animation: none;   
+}
+}
 
